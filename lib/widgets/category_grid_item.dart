@@ -6,9 +6,15 @@ import 'package:meals_app_05/models/meals.dart';
 import 'package:meals_app_05/screens/meals.dart';
 
 class CategoryGridItem extends StatelessWidget {
-  const CategoryGridItem({super.key, required this.category});
+  const CategoryGridItem({
+    super.key,
+    required this.category,
+    required this.onToggleFavorite,
+  });
 
   final Category category;
+
+  final void Function(Meal meal) onToggleFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +26,11 @@ class CategoryGridItem extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => MealsScreen(meals: filterMeal, title: category.title),
+            builder: (_) => MealsScreen(
+              meals: filterMeal,
+              title: category.title,
+              onToggleFavorite: onToggleFavorite,
+            ),
           ),
         );
       },
