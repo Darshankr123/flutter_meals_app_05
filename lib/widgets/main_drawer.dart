@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -9,7 +10,7 @@ class MainDrawer extends StatelessWidget {
       child: Column(
         children: [
           DrawerHeader(
-            padding: EdgeInsetsGeometry.all(20),
+            padding: const EdgeInsetsGeometry.all(20),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -29,7 +30,7 @@ class MainDrawer extends StatelessWidget {
                   size: 48,
                   color: Theme.of(context).colorScheme.primary,
                 ),
-                const SizedBox(width: 30,),
+                const SizedBox(width: 18),
                 Text(
                   "Cooking Up",
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
@@ -40,33 +41,27 @@ class MainDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(
-              Icons.set_meal,
-              color: Theme.of(context).colorScheme.onSurface,
-            ),
+            leading: Icon(Icons.restaurant,size: 26,color: Theme.of(context).colorScheme.onSurface,),
             title: Text(
               "Meals",
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Theme.of(context).colorScheme.onSurface,
-                fontSize: 24,
+                color: Theme.of(context).colorScheme.onBackground,
+                fontSize: 24
               ),
             ),
             onTap: (){},
           ),
           ListTile(
-            leading: Icon(
-              Icons.settings,
-              color: Theme.of(context).colorScheme.onSurface,
-            ),
+            leading: Icon(Icons.settings,size: 26,color: Theme.of(context).colorScheme.onSurface,),
             title: Text(
-              "Settings",
+              "Filters",
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                color: Theme.of(context).colorScheme.onSurface,
-                fontSize: 24,
+                  color: Theme.of(context).colorScheme.onBackground,
+                  fontSize: 24
               ),
             ),
             onTap: (){},
-          ),
+          )
         ],
       ),
     );

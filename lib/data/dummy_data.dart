@@ -190,7 +190,7 @@ const dummyMeals = [
   Meal(
     id: 'm5',
     categories: [
-      'c2'
+      'c2',
           'c5',
       'c10',
     ],

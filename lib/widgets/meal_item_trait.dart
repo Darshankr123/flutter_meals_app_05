@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MealItemTrait extends StatelessWidget {
@@ -12,7 +13,7 @@ class MealItemTrait extends StatelessWidget {
       children: [
         Icon(icon, size: 17, color: Colors.white),
         const SizedBox(width: 6),
-        Text(label, style: const TextStyle(color: Colors.white)),
+        Text(label, style: TextStyle(color: Colors.white)),
       ],
     );
   }
